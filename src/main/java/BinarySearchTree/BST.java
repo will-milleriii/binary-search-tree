@@ -20,6 +20,12 @@ public class BST {
                     if (current == null){ //parent is leaf node
                         parent.leftChild = newNode;
                         return;
+                    } else {
+                        current = current.rightChild;
+                        if (current == null){
+                            parent.rightChild = newNode;
+                            return;
+                        }
                     }
                 }
             }
